@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Payment Gateway</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="WhatsYourId">
+        <s:complexType />
+      </s:element>
+      <s:element name="WhatsYourIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WhatsYourIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCardNumberValid">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCardNumberValidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsCardNumberValidResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidPaymentAmount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidPaymentAmountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsValidPaymentAmountResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CanMakePaymentWithCard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cardNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="expiryMonth" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="expiryYear" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CanMakePaymentWithCardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CanMakePaymentWithCardResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WhatsYourIdSoapIn">
+    <wsdl:part name="parameters" element="tns:WhatsYourId" />
+  </wsdl:message>
+  <wsdl:message name="WhatsYourIdSoapOut">
+    <wsdl:part name="parameters" element="tns:WhatsYourIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsCardNumberValidSoapIn">
+    <wsdl:part name="parameters" element="tns:IsCardNumberValid" />
+  </wsdl:message>
+  <wsdl:message name="IsCardNumberValidSoapOut">
+    <wsdl:part name="parameters" element="tns:IsCardNumberValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsValidPaymentAmountSoapIn">
+    <wsdl:part name="parameters" element="tns:IsValidPaymentAmount" />
+  </wsdl:message>
+  <wsdl:message name="IsValidPaymentAmountSoapOut">
+    <wsdl:part name="parameters" element="tns:IsValidPaymentAmountResponse" />
+  </wsdl:message>
+  <wsdl:message name="CanMakePaymentWithCardSoapIn">
+    <wsdl:part name="parameters" element="tns:CanMakePaymentWithCard" />
+  </wsdl:message>
+  <wsdl:message name="CanMakePaymentWithCardSoapOut">
+    <wsdl:part name="parameters" element="tns:CanMakePaymentWithCardResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PaymentGatewaySoap">
+    <wsdl:operation name="WhatsYourId">
+      <wsdl:input message="tns:WhatsYourIdSoapIn" />
+      <wsdl:output message="tns:WhatsYourIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCardNumberValid">
+      <wsdl:input message="tns:IsCardNumberValidSoapIn" />
+      <wsdl:output message="tns:IsCardNumberValidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidPaymentAmount">
+      <wsdl:input message="tns:IsValidPaymentAmountSoapIn" />
+      <wsdl:output message="tns:IsValidPaymentAmountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CanMakePaymentWithCard">
+      <wsdl:input message="tns:CanMakePaymentWithCardSoapIn" />
+      <wsdl:output message="tns:CanMakePaymentWithCardSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PaymentGatewaySoap" type="tns:PaymentGatewaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WhatsYourId">
+      <soap:operation soapAction="http://tempuri.org/WhatsYourId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCardNumberValid">
+      <soap:operation soapAction="http://tempuri.org/IsCardNumberValid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidPaymentAmount">
+      <soap:operation soapAction="http://tempuri.org/IsValidPaymentAmount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanMakePaymentWithCard">
+      <soap:operation soapAction="http://tempuri.org/CanMakePaymentWithCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PaymentGatewaySoap12" type="tns:PaymentGatewaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WhatsYourId">
+      <soap12:operation soapAction="http://tempuri.org/WhatsYourId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCardNumberValid">
+      <soap12:operation soapAction="http://tempuri.org/IsCardNumberValid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidPaymentAmount">
+      <soap12:operation soapAction="http://tempuri.org/IsValidPaymentAmount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CanMakePaymentWithCard">
+      <soap12:operation soapAction="http://tempuri.org/CanMakePaymentWithCard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PaymentGateway">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Payment Gateway</wsdl:documentation>
+    <wsdl:port name="PaymentGatewaySoap" binding="tns:PaymentGatewaySoap">
+      <soap:address location="http://localhost:49522/IPaymentService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PaymentGatewaySoap12" binding="tns:PaymentGatewaySoap12">
+      <soap12:address location="http://localhost:49522/IPaymentService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\IPaymentServices Tests\bin\Debug\IPaymentServices Tests.dll.config
+C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\IPaymentServices Tests\bin\Debug\IPaymentServices Tests.dll
+C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\IPaymentServices Tests\bin\Debug\IPaymentServices Tests.pdb
+C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\IPaymentServices Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\IPaymentServices Tests\obj\Debug\IPaymentServices Tests.csprojResolveAssemblyReference.cache
+C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\IPaymentServices Tests\obj\Debug\IPaymentServices Tests.dll
+C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\IPaymentServices Tests\obj\Debug\IPaymentServices Tests.pdb
