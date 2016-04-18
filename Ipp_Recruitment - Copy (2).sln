@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Ipp_Recruitment", "Ipp_Recruitment\", "{21AAFD23-6501-461A-90CD-81FAFF19F21E}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Ipp_Recruitment", "C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\Ipp_Recruitment\", "{21AAFD23-6501-461A-90CD-81FAFF19F21E}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_49522"
-		Debug.AspNetCompiler.PhysicalPath = "Ipp_Recruitment\"
+		Debug.AspNetCompiler.PhysicalPath = "C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\Ipp_Recruitment\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49522\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_49522"
-		Release.AspNetCompiler.PhysicalPath = "Ipp_Recruitment\"
+		Release.AspNetCompiler.PhysicalPath = "C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\Ipp_Recruitment\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_49522\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "49522"
-		SlnRelativePath = "Ipp_Recruitment\"
+		SlnRelativePath = "C:\Users\Rajiv\Documents\Visual Studio 2015\Projects\Ipp_Recruitment\Ipp_Recruitment\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
